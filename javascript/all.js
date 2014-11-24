@@ -5,6 +5,7 @@ $coverimage = $('#coverimage .inner'),
 $dragger = $('#dragger'),
 $sizer = $('#size-slider'),
 $loading = $('#loading');
+$uploading = $('#uploading');
 
 $(window).load(function()
 {
@@ -188,12 +189,9 @@ $('.gototop').click(function(){
 
 // function
 function loadImage(files) {
+  $uploading.fadeIn();
   $loading.show();
-  var input, file, fr, img;
-  if (typeof window.FileReader !== 'function') {
-    alert('悲劇！您的瀏覽器太古老了，無法運行我們的服務！')
-    return;
-  }
+  var file, fr, img;
   if (!files) {
     alert('悲劇！您的瀏覽器不支援檔案上傳！')
   } else {
@@ -227,6 +225,7 @@ function loadImage(files) {
       resizeDragger(userimage_size,container_size,value);
 
       $loading.hide();
+      $uploading.fadeOut();
     });
   }
 }
