@@ -1,0 +1,32 @@
+@include establish-baseline;
+
+h1 {
+  @include adjust-font-size-to($font-size-xxl);
+}
+h2 {
+  @include adjust-font-size-to($font-size-xl);
+}
+h3 {
+  @include adjust-font-size-to($font-size-l);
+}
+h4 {
+  @include adjust-font-size-to($font-size-m);
+}
+h5 {
+  @include adjust-font-size-to($font-size-s);
+}
+h6 {
+  @include adjust-font-size-to($font-size-xs);
+}
+p {
+  @include adjust-font-size-to($base-font-size);
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.ellipsis {
+  word-wrap: break-word;
+}

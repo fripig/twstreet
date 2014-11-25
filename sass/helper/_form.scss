@@ -1,0 +1,17 @@
+// form placeholder color mixin
+@mixin input-placeholder-color($color)
+{
+  &::-webkit-input-placeholder {
+    color: $color;
+    -webkit-font-smoothing: antialiased;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: lighten($color, 10%);
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}

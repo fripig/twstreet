@@ -1,0 +1,66 @@
+#rotate_container {
+  width: auto;
+  height: auto;
+  margin: auto auto;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10000;
+  opacity: 0;
+  overflow: hidden;
+}
+#rotate_object {
+  position: relative;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+#rotateCopy {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -10;
+}
+.ui-wrapper {
+  overflow: visible !important;
+}
+.ui-resizable-handle {
+  background: #f5dc58;
+  border: 1px solid #FFF;
+  z-index: 2;
+}
+.ui-rotatable-handle {
+  background: #f5dc58;
+  border: 1px solid #FFF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  cursor: pointer;
+  height: 10px;
+  left: 50%;
+  margin: 0 0 0 -5px;
+  position: absolute;
+  top: -5px;
+  width: 10px;
+}
+.ui-rotatable-handle.clone {
+  visibility: hidden;
+}
+.ui-resizable-ne,
+.ui-resizable-nw,
+.ui-resizable-se,
+.ui-resizable-sw {
+  width: 24px;
+  height: 24px;
+  @include border-radius(12px);
+  background: rgba(245, 220, 88, 0.5);
+  @include at-breakpoint($desktop) {
+    width: 12px;
+    height: 12px;
+    @include border-radius(0px);
+  }
+}

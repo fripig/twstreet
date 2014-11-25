@@ -1,0 +1,21 @@
+.gototop {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 100000;
+  cursor: pointer;
+  background: $main-color;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 30px;
+  line-height: 50px;
+  border-radius: 3px;
+  display: none;
+
+  .glyphicon {
+    bottom: 0;
+    left: 1px;
+  }
+}

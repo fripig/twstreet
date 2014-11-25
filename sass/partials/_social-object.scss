@@ -1,0 +1,39 @@
+.likebtn {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  text-align: center;
+  margin: auto auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.fbcomment{
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin: auto auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  h3 {
+    width: 144px;
+    height: 37px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 1px;
+    text-indent: -9999px;
+    margin: auto auto;
+    background: url(../images/feedbacktitle.png) no-repeat;
+    margin-bottom: 10px;
+  }
+}
+.plzlike {
+  position: relative;
+  width: 100%;
+  font-size: 12px;
+  color: #399;
+  text-align: center;
+  margin: 10px auto;
+  display: none;
+}

@@ -165,14 +165,14 @@ function handleDragOver(evt) {
 
 
 //mobile preview
-$("#show").click(function() {
-  if($(".preview").css('z-index') == '1200') {
-    $(".preview").css('z-index','-9999').css('opacity',0);
-  }
-  else if($(".preview").css('z-index') == '-9999') {
-    $(".preview").css('z-index','1200').css('opacity',1);
-  }
-});
+// $("#show").click(function() {
+//   if($(".preview").css('z-index') == '1200') {
+//     $(".preview").css('z-index','-9999').css('opacity',0);
+//   }
+//   else if($(".preview").css('z-index') == '-9999') {
+//     $(".preview").css('z-index','1200').css('opacity',1);
+//   }
+// });
 
 // scroll to top
 $(window).scroll(function (event) {

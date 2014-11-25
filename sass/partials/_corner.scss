@@ -1,0 +1,13 @@
+.left-bottom-corner {
+  position: relative;
+  text-align: center;
+  div {
+    margin:0 auto;
+  }
+  @include at-breakpoint($pad) {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    z-index:100;
+  }
+}

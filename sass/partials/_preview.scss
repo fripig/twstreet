@@ -1,0 +1,149 @@
+.preview {
+  // position: fixed;
+  // top: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  // width: 100%;
+  // height: 100%;
+  // z-index: 1200;
+  // z-index: -9999;
+  // background: rgba(200,200,200,.8);
+  // opacity: 0;
+  height: 500px;
+
+  #userimage,
+  #coverimage, {
+    width: 90%;
+    max-width: 500px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto auto;
+    display: table;
+    .inner {
+      width: 100%;
+      padding-top: 100%;
+      background-repeat: no-repeat;
+      @include box-shadow(2px 2px 3px 0px rgba(50, 50, 50, 0.3));
+      outline: 1px solid #efefef;
+      background-size: 100% auto;
+      background-position: 50% 50%;
+    }
+  }
+  // #coverimage:hover #size-slider {
+  //   opacity: 1;
+  // }
+  #coverimage {
+    overflow: hidden;
+  }
+  #dragger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    cursor: move;
+    // background: rgba(127,127,127,0.5);
+  }
+  #size-slider {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    margin: 0 20px;
+    // opacity: 0;
+
+    &.ui-widget-content {
+      border: none;
+      border-top: 2px solid #999;
+      @include border-radius(0px);
+      height: 1px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: -23px;
+        left: 0;
+        display: block;
+        width: 110%;
+        height: 42px;
+        background: rgba(230,230,230,0.9);
+        @include border-radius(20px);
+        margin-left: -5%;
+      }
+    }
+    .ui-state-default,
+    .ui-widget-content .ui-state-default,
+    .ui-widget-header .ui-state-default {
+      outline: none;
+      width: 30px;
+      height: 30px;
+      background: $main-color;
+      opacity: 1;
+      border: 0px solid transparent;
+      @include border-radius(15px);
+      cursor: pointer;
+    }
+    .ui-slider-handle {
+      top: -0.9em;
+      margin-left: -0.8em;
+    }
+    .zoomin {
+      color: $main-color;
+      position: absolute;
+      top: -15px;
+      right: -17px;
+    }
+    .zoomout {
+      color: $main-color;
+      position: absolute;
+      top: -15px;
+      left: -17px;
+    }
+  }
+  #userimage .inner {
+    background-color: #CCCCCC;
+    // background-color: black;
+  }
+  #loading {
+    position: absolute;
+    top:0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+
+    div {
+      position: relative;
+      width:100%;
+      height: 100%;
+    }
+    img {
+      width: 43px;
+      height: 11px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -5px;
+      margin-left: -21px;
+    }
+  }
+  @include at-breakpoint($pad) {
+    display: block;
+    position: relative;
+    // min-height: 75%;
+    top: inherit;
+    bottom: inherit;
+    left: inherit;
+    right: inherit;
+    // background: none;
+    margin-top: -60px;
+    // z-index: 1000;
+    // opacity: 1;
+    height: inherit;
+  }
+}

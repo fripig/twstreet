@@ -1,0 +1,21 @@
+// gray
+$white : #FFFFFE;
+$black : #222221;
+
+// main color
+$main-color: #00ACB3;
+$main-color-light    : lighten($main-color, 10%);
+$main-color-dark     : darken($main-color, 10%);
+
+// background color
+$background-color : $white;
+
+// text color
+$text-black         : #666;
+$text-black-light   : #999;
+$text-gray          : #8A8A8A;
+$text-gray-light    : lighten($text-gray, 10%);
+
+// link color
+$link-color       : $main-color;
+$link-color-hover : $main-color;

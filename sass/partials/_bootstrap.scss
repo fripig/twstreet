@@ -1,0 +1,119 @@
+// navbar
+.navbar {
+  border-width: 0;
+  background-color: $main-color;
+  border-bottom: 1px solid darken($main-color,8%);
+  @include box-shadow(0 2px 2px -2px rgba(0, 0, 0, .52));
+  color: #ffffff;
+  font-family: arial,sans-serif;
+  top: 0;
+  position: fixed;
+  width: inherit;
+
+  a {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  li > a,
+  .navbar-toggle {
+    color: #efefef;
+  }
+  li > a.btn {
+    color: #666666;
+  }
+  .dropdown-menu li a,
+  .dropdown-menu li a:hover {
+    color: white;
+  }
+  .dropdown-menu li > a {
+    padding-left: 30px;
+  }
+  .dropdown-menu .divider {
+    background-color: rgba(255,255,255,0.1);
+  }
+  li > a:hover,
+  li > a:focus,
+  .open, .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    background-color: $main-color-dark;
+    color: #fff;
+  }
+  .logo {
+    color: $white;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .navbar-toggle, .close {
+    outline: 0;
+  }
+  .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+  .nav .caret,
+  .nav a:hover .caret {
+    border-top-color: $white;
+    border-bottom-color: $white;
+  }
+  .nav .open > a .caret,
+  .nav .open > a:hover .caret,
+  .nav .open > a:focus .caret {
+    border-top-color: $white;
+    border-bottom-color: $white;
+  }
+
+  @include at-breakpoint($pad) {
+    .dropdown-menu li a {
+      color: $main-color;
+    }
+    .dropdown-menu .divider {
+      background-color: #eee;
+    }
+    .navbar-form {
+      width: 40%;
+    }
+  }
+  @include at-breakpoint($desktop) {
+    .navbar-form {
+      width: 30%;
+    }
+  }
+}
+
+// dropdown
+.dropdown-menu {
+  font-size: $base-font-size;
+}
+
+// row
+.row {
+  height: inherit;
+  // min-height: 75%;
+}
+
+// textarea
+textarea.form-control {
+  margin:auto auto;
+  width: 100%;
+  min-height:140px;
+  font-size:20px;
+  line-height:30px;
+  color: #333;
+  resize: none;
+  padding:5px;
+  padding-bottom:20px;
+}
+
+// checkbox
+label.checkbox {
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: bottom;
+  margin: 0 10px 10px 10px;
+}
+
+//btn
+.btn-default.active {
+  outline: 2px solid #999;
+}

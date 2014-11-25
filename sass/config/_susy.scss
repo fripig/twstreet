@@ -1,0 +1,10 @@
+// susy
+$total-columns  : 4;
+
+// breakpoint
+$phone          : $total-columns;
+$pad            : 768px 8 lte-ie9;
+$desktop        : 1024px 12 lte-ie9;
+
+//container
+$page-container: ".container";
