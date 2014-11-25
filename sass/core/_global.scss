@@ -1,5 +1,6 @@
 html, body {
-  height: 100%;
+  // height: 100%;
+
 }
 body {
   -webkit-text-size-adjust: 100%;
@@ -9,11 +10,18 @@ body {
   color: $text-black;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  padding: 20px 0;
+  background: #25aab2;
 }
 a {
   @include link-colors($link-color, $link-color-hover);
-  @include hover-link;
+  text-decoration: none;
+  border-bottom: 1px solid white;
 }
+a:hover {
+  text-decoration: none;
+}
+
 #header {
 
 }
@@ -21,7 +29,7 @@ a {
   position: relative;
   height: auto;
   // min-height: 75%;
-  margin-top: 70px;
+  margin-top: 30px;
   @include at-breakpoint($pad) {
     height: inherit;
   }

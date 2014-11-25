@@ -114,6 +114,14 @@ label.checkbox {
 }
 
 //btn
+.btn-default {
+  border: 2px solid #9bd4d9;
+}
+.btn-default:hover {
+  border: 2px solid #9bd4d9;
+}
+
 .btn-default.active {
-  outline: 2px solid #999;
+  border: 2px solid white;
+  @include box-shadow( 0 0 20px rgba(white,.7));
 }

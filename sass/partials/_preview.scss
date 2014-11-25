@@ -10,11 +10,21 @@
   // z-index: -9999;
   // background: rgba(200,200,200,.8);
   // opacity: 0;
-  height: 500px;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  border: 2px solid #9bd4d9;
+  &:after {
+    z-index: -1;
+    content: "";
+    display: block;
+    padding-top: 100%;
+    // margin-bottom: 80px;
+  }
 
   #userimage,
-  #coverimage, {
-    width: 90%;
+  #coverimage {
+    width: 100%;
     max-width: 500px;
     position: absolute;
     top: 0;
@@ -22,13 +32,10 @@
     left: 0;
     right: 0;
     margin: auto auto;
-    display: table;
     .inner {
       width: 100%;
       padding-top: 100%;
       background-repeat: no-repeat;
-      @include box-shadow(2px 2px 3px 0px rgba(50, 50, 50, 0.3));
-      outline: 1px solid #efefef;
       background-size: 100% auto;
       background-position: 50% 50%;
     }
@@ -58,20 +65,18 @@
     // opacity: 0;
 
     &.ui-widget-content {
-      border: none;
-      border-top: 2px solid #999;
       @include border-radius(0px);
       height: 1px;
 
       &:before {
         content: "";
         position: absolute;
-        top: -23px;
+        top: -21px;
         left: 0;
         display: block;
         width: 110%;
-        height: 42px;
-        background: rgba(230,230,230,0.9);
+        height: 40px;
+        background: white;
         @include border-radius(20px);
         margin-left: -5%;
       }
@@ -132,18 +137,18 @@
       margin-left: -21px;
     }
   }
-  @include at-breakpoint($pad) {
-    display: block;
-    position: relative;
-    // min-height: 75%;
-    top: inherit;
-    bottom: inherit;
-    left: inherit;
-    right: inherit;
-    // background: none;
-    margin-top: -60px;
-    // z-index: 1000;
-    // opacity: 1;
-    height: inherit;
-  }
+  // @include at-breakpoint($pad) {
+  //   display: block;
+  //   position: relative;
+  //   // min-height: 75%;
+  //   top: inherit;
+  //   bottom: inherit;
+  //   left: inherit;
+  //   right: inherit;
+  //   // background: none;
+  //   margin-top: -60px;
+  //   // z-index: 1000;
+  //   // opacity: 1;
+  //   height: inherit;
+  // }
 }
