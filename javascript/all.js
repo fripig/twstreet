@@ -91,6 +91,12 @@ $(document).ready(function()
     createImage(template,source,x,y,w,h);
   });
 });
+$(window).konami({
+  code : [55,55,55],
+  cheat: function() {
+    $('.banana').slideDown();
+  }
+});
 
 function createImage(template,source,x,y,w,h){
   var cover = new Image();
