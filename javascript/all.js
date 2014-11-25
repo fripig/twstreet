@@ -75,7 +75,6 @@ $(document).ready(function()
   });
 
   $("#normalSubmit").click(function() {
-    $('#plzlike').fadeIn(800);
     var
     basesize = $userimage.width(),
     size = getBackgroundSize($userimage.css('background-size')),
@@ -116,22 +115,6 @@ function createImage(template,source,x,y,w,h){
   $('#download')[0].click();
 }
 
-//window resize event
-var w = $(window).width();
-$(window).resize(function()
-{
-  var nw = $(window).width();
-  if(w !== nw) {
-    var
-    value = $('input[name=template]:checked').val(),
-    container_size = $userimage.width(),
-    userimage_size = getImgSize(getBackgroundImage($userimage));
-    resizeDragger(userimage_size,container_size,value);
-    w = nw;
-  }
-});
-
-
 //uploader
 $(function(){
   var dropZone = document.getElementById('drop');
@@ -159,19 +142,6 @@ function handleDragOver(evt) {
   evt.preventDefault();
   evt.dataTransfer.dropEffect = 'copy';
 }
-
-// scroll to top
-$(window).scroll(function (event) {
-  var scroll = $(window).scrollTop();
-  var height = $(window).height();
-  if(scroll > height)
-    $('.gototop').show();
-  else
-    $('.gototop').hide();
-});
-$('.gototop').click(function(){
-  $('html,body').animate({scrollTop: 0},'fast');
-});
 
 // function
 function loadImage(files) {
@@ -201,7 +171,24 @@ function loadImage(files) {
 
     $('#source').attr('value',base64);
     $userimage.css('background-image','url('+base64+')');
-    $('#templates label').css('background-image','url('+base64+')');
+
+    var thumb = document.getElementById("thumb");
+    var thumb_w,thumb_h;
+    if(img.width > img.height) {
+      thumb_h = 100;
+      thumb_w = 100*(img.width/img.height);
+    }
+    else {
+      thumb_w = 100;
+      thumb_h = 100*(img.height/img.width);
+    }
+    thumb.width = thumb_w;
+    thumb.height = thumb_h;
+    var ctx = thumb.getContext("2d");
+    ctx.drawImage(img,0,0,thumb_w,thumb_h);
+    var thumbbase64 = thumb.toDataURL("image/png");
+    $('#templates label').css('background-image','url('+thumbbase64+')');
+
     $('<img/>').attr('src',base64)
     .load(function() {
       var
