@@ -1,4 +1,3 @@
-// vars
 var
 $userimage = $('#userimage .inner'),
 $coverimage = $('#coverimage .inner'),
@@ -36,7 +35,6 @@ $(document).ready(function()
       truesize = getBackgroundSize($userimage.css('background-size')),
       position = getBackgroundPosition($userimage.css('background-position')),
       center = getBackgroundCenterPoint(truesize,position);
-      // size = getImgSize(getBackgroundImage($userimage))
       $('<img/>').attr('src',getBackgroundImage($userimage))
       .load(function() {
         var
@@ -96,6 +94,7 @@ $(document).ready(function()
 });
 
 function createImage(template,source,x,y,w,h){
+  console.log(source)
 
   var cover = new Image();
   cover.src = 'images/object/'+template+'.png';
@@ -162,17 +161,6 @@ function handleDragOver(evt) {
   evt.preventDefault();
   evt.dataTransfer.dropEffect = 'copy';
 }
-
-
-//mobile preview
-// $("#show").click(function() {
-//   if($(".preview").css('z-index') == '1200') {
-//     $(".preview").css('z-index','-9999').css('opacity',0);
-//   }
-//   else if($(".preview").css('z-index') == '-9999') {
-//     $(".preview").css('z-index','1200').css('opacity',1);
-//   }
-// });
 
 // scroll to top
 $(window).scroll(function (event) {
@@ -296,14 +284,12 @@ function resizeDragger(size,wrapper,value,upload)
     }
   }
 
-  // if($userimage.hasClass('dragged') == false || value == 9 || value == 10 || upload == 1) {
-    $dragger
-      .css('width',width+'px').css('height',height+'px')
-      .css('top',top+'px').css('left',left+'px');
-    $userimage
-      .css('background-size',width+'px '+height+'px')
-      .css('background-position',left+'px '+top+'px');
-  // }
+  $dragger
+    .css('width',width+'px').css('height',height+'px')
+    .css('top',top+'px').css('left',left+'px');
+  $userimage
+    .css('background-size',width+'px '+height+'px')
+    .css('background-position',left+'px '+top+'px');
 }
 function getBackgroundSize(string)
 {
