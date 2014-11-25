@@ -94,8 +94,6 @@ $(document).ready(function()
 });
 
 function createImage(template,source,x,y,w,h){
-  console.log(source)
-
   var cover = new Image();
   cover.src = 'images/object/'+template+'.png';
 
