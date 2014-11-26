@@ -15,6 +15,16 @@ $(window).load(function()
 });
 $(document).ready(function()
 {
+  // ie alert
+  $("body").iealert({
+    support: 'ie9',
+    title: '您的瀏覽器太舊啦！',
+    text: '請更新您的瀏覽器，我們推薦您使用 Google Chrome',
+    closeBtn: false,
+    upgradeTitle: '下載 Google Chrome',
+    upgradeLink: 'http://www.google.com/chrome/'
+  });
+
   // dragger
   $dragger.draggable({
     drag: function(event) {
