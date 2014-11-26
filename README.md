@@ -1,5 +1,9 @@
 # 7 號頭像產生器（開源版）
 
+## Demo
+
+[這裡](http://goooooooogle.github.io/profile-picture-generator/)
+
 
 ## 簡介
 
