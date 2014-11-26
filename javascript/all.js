@@ -129,8 +129,20 @@ function createImage(template,source,x,y,w,h){
   ctx.drawImage(cover,0,0,500,500);
 
   var base64 = resize_canvas.toDataURL("image/png");
-  $('#download').attr('href',base64);
-  $('#download')[0].click();
+
+  // check ie or not
+  var ua = window.navigator.userAgent;
+  var msie = ua.indexOf("MSIE ");
+  if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){
+    var html="<p>請按右鍵另存圖片</p>";
+    html+="<img src='"+base64+"' alt='7'/>";
+    var tab=window.open();
+    tab.document.write(html);
+  }
+  else{
+    $('#download').attr('href',base64);
+    $('#download')[0].click();
+  }
 }
 
 //uploader
@@ -163,12 +175,12 @@ function handleDragOver(evt) {
 
 // function
 function loadImage(files) {
-  $uploading.fadeIn();
-  $loading.show();
   var file, fr, img;
   if (!files) {
     alert('悲劇！您的瀏覽器不支援檔案上傳！')
   } else {
+    $uploading.fadeIn();
+    $loading.show();
     file = files[0];
     fr = new FileReader();
     fr.onload = createImage;
