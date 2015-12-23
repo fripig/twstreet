@@ -145,7 +145,7 @@ function createImage(template,source,x,y,w,h){
   var msie = ua.indexOf("MSIE ");
   if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){
     var html="<p>請按右鍵另存圖片</p>";
-    html+="<img src='"+base64+"' alt='7'/>";
+    html+="<img src='"+base64+"' alt='10'/>";
     var tab=window.open();
     tab.document.write(html);
   }

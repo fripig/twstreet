@@ -71,12 +71,11 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-color: #fffffe;
+  background-color: #DF6934;
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
   line-height: 24px;
   padding: 20px 0;
-  background: #25aab2;
 }
 
 /* line 16, ../sass/core/_global.scss */
