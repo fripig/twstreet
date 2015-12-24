@@ -307,6 +307,7 @@ label.checkbox {
   margin:auto auto;
   margin-bottom:25px;
   margin-top:20px;
+  font-weight: 900;
 }
 /* line 20, ../sass/partials/_generator.scss */
 #generator h2 {
