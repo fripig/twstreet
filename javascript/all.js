@@ -151,6 +151,7 @@ function createImage(template,source,x,y,w,h){
   }
   else{
     $('#download').attr('href',base64);
+    $('#download').attr('download',(+ new Date())+'.png');
     $('#download')[0].click();
   }
 }
