@@ -1,4 +1,4 @@
-# 支持邱顯智 10 號頭像產生器
+# 台灣街景封面產生器
 
 ## Demo
 
@@ -7,9 +7,7 @@
 
 ## 簡介
 
-本產生器由 [7號頭像產生器](https://github.com/goooooooogle/7) 開發
-
-圖片由邱顯智競選團隊提供。
+本產生器參考[7號頭像產生器](https://github.com/goooooooogle/7) 開發
 
 ## 授權
 
