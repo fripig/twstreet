@@ -3,7 +3,7 @@ $userimage = $('#userimage .inner'),
 $coverimage = $('#coverimage .inner'),
 $dragger = $('#dragger'),
 $sizer = $('#size-slider'),
-$loading = $('#loading');
+$loading = $('#loading'),
 $uploading = $('#uploading');
 
 $(window).load(function()
