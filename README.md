@@ -9,6 +9,8 @@
 
 本產生器參考[7號頭像產生器](https://github.com/goooooooogle/7) 開發
 
+[支持邱顯智 10 號頭像產生器](https://github.com/yhsiang/10)
+
 ## 授權
 
 專案採用 [BSD 授權](LICENSE)
