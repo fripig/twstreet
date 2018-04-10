@@ -147,7 +147,6 @@ function createImage(template, source, x, y, w, h) {
 
     var base64 = resize_canvas.toDataURL("image/png");
 
-<<<<<<< HEAD
     // check ie or not
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf("MSIE ");
@@ -162,23 +161,6 @@ function createImage(template, source, x, y, w, h) {
         $('#download').attr('download', (+new Date()) + '.png');
         $('#download')[0].click();
     }
-=======
-  // check ie or not
-  var ua = window.navigator.userAgent;
-  var msie = ua.indexOf("MSIE ");
-  if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)){
-    var html="<p>請按右鍵另存圖片</p>";
-    html+="<img src='"+base64+"' alt='10'/>";
-    var tab=window.open();
-    tab.document.write(html);
-  }
-  else{
-    $('#download').attr('href',base64);
-    $('#download').attr('download',(+ new Date())+'.png');
-    $('#download')[0].click();
-    ga('send', 'event', 'download', 'pic', (+ new Date()));
-  }
->>>>>>> gh-pages
 }
 
 //uploader
