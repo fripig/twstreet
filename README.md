@@ -7,7 +7,7 @@
 
 ## 簡介
 
-本產生器參考[7號頭像產生器](https://github.com/goooooooogle/7) 開發
+本產生器參考[支持邱顯智 10 號頭像產生器](https://github.com/yhsiang/10) 開發
 
 [支持邱顯智 10 號頭像產生器](https://github.com/yhsiang/10)
 
