@@ -2,8 +2,7 @@
 
 ## Demo
 
-[這裡](http://twstreet.spotlights.news)
-
+https://fripig.github.io/twstreet/
 
 ## 簡介
 
